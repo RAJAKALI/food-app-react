@@ -1,0 +1,62 @@
+body {
+background-color: aliceblue;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.nav-main{
+    position:fixed;
+    width: 100%;
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it to the left */
+    background-color:rgb(255, 255, 255);
+    border-bottom:1px solid rgb(185, 179, 179);
+    box-shadow: rgba(0, 0, 0, 0.2);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+.nav-header{
+    width: 100px;
+    height:auto;
+}
+.right-nav > ul{
+ list-style-type: none;
+ display: flex;
+}
+.right-nav > ul > li{
+    padding: 0px 10px;
+}
+.right-nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+.body-cards{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.restrunts-card{
+    width: 250px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.card-img{
+    width:100%;
+    height: 150px;
+    border-top-right-radius: 8px; 
+    border-top-left-radius: 8px;
+}
+.card-title > *{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    margin-left:5px;
+    color:rgb(54, 54, 51);    
+    font-family: sans-serif,Arial, Helvetica, sans-serif;        
+}
