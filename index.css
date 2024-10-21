@@ -34,14 +34,13 @@ box-sizing: border-box;
     color: black;
 }
 .body-cards{
-    margin-top: 40px;
+    /* margin-top: 40px; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 .restrunts-card{
-    width: 250px;
-    margin: 10px;
+    width: 200px;
+    margin: 30px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -59,4 +58,11 @@ box-sizing: border-box;
     margin-left:5px;
     color:rgb(54, 54, 51);    
     font-family: sans-serif,Arial, Helvetica, sans-serif;        
+}
+.search{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.searchbtn{
+    cursor: pointer;
 }
