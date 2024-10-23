@@ -1,5 +1,4 @@
-import { IMG_CDN_URL } from "../contants";
-
+import { IMG_CDN_URL } from "../utils/constants";
 const Restrunts = ({
     name,
     avgRatingString,
@@ -12,7 +11,7 @@ const Restrunts = ({
       <div className="card-title">
       <h4>{name}</h4>
       <h5>{avgRatingString}</h5>
-      <h5>{cuisines.join(",")}</h5>
+      <h5>{cuisines}</h5>
       </div>
     </div>
   );

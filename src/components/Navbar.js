@@ -1,10 +1,10 @@
-import logo from "../../assets/Google.png";
+import { LOGO } from "../utils/constants";
 
 const Navbar = () => {
     return (
       <div className="nav-main">
       <div className="navbar">
-        <img className="nav-header" src={logo} />
+        <img className="nav-header" src={LOGO} />
         <div className="right-nav">
           <ul>
             <li>
