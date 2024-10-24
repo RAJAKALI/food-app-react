@@ -1,5 +1,5 @@
 import { IMG_CDN_URL } from "../utils/constants";
-const Restrunts = ({
+const RestruntCard = ({
     name,
     avgRatingString,
     cuisines,
@@ -17,4 +17,4 @@ const Restrunts = ({
   );
 };
 
-export default Restrunts;
+export default RestruntCard;

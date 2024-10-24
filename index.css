@@ -64,7 +64,7 @@ box-sizing: border-box;
     white-space: nowrap; 
     margin-left:5px;
     color:rgb(54, 54, 51);    
-    font-family: sans-serif,Arial, Helvetica, sans-serif;        
+    font-family: sans-serif,Arial, Helvetica, sans-serif;      
 }
 .searchbtn{
     cursor: pointer;
@@ -82,4 +82,28 @@ box-sizing: border-box;
 }
 .filter-btn{
     cursor: pointer;
+}
+.cardbody-shimmer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.card-shimmer{
+    width: 200px;
+    margin: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background-color:grey;
+}
+.error-container{
+    color: red;
+    text-align: center;
+    margin-top:200px;
+}
+.contacts-container,.about-container,.restruntinfo-container{
+    margin-top: 50px;
+}
+.link-cards{
+    text-decoration: none;
 }

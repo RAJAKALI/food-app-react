@@ -1,29 +1,44 @@
+import { useState } from "react";
 import { LOGO } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    return (
-      <div className="nav-main">
+  const [loginToggle, setLoginToggle] = useState("Login");
+  return (
+    <div className="nav-main">
       <div className="navbar">
         <img className="nav-header" src={LOGO} />
         <div className="right-nav">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">Orders</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#">Locations</a>
+              <Link to="/contacts">Contacts</Link>
             </li>
             <li>
-              <a href="#">Restrunts</a>
+              <Link to="#">Cart</Link>
+            </li>
+            <li>
+              <Link href="#">
+                <button
+                  onClick={() => {
+                    setLoginToggle(
+                      loginToggle === "Login" ? "Logout" : "Login"
+                    );
+                  }}
+                >
+                  {loginToggle}
+                </button></Link>
             </li>
           </ul>
         </div>
       </div>
-      </div>
-    );
-  };
+    </div>
+  );
+};
 
-  export default Navbar;
+export default Navbar;
