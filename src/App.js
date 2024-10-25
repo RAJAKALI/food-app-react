@@ -1,22 +1,19 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "../index.css";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Body from "./components/Body";
 import About from "./components/About";
-import Contacts from "./components/Contacts";
+// import Contacts from "./components/Contacts";
 import Error from "./components/Error";
 import { Outlet } from "react-router-dom";
-
 import { createBrowserRouter,Outlet,RouterProvider } from "react-router-dom";
 import ResturntInfo from "./components/RetruntInfo";
-
+const Contacts = lazy(() => import('./components/Contacts'));
 const AppLayout = () => (
   <>
     <Navbar />
     <Outlet/>
-    <Footer />
   </>
 );
 
@@ -35,7 +32,9 @@ const routerroot=createBrowserRouter([
       },
       {
         path:'/contacts',
-        element:<Contacts/>
+        element:<Suspense fallback={<h1>Loading..</h1>}>
+        <Contacts/>
+        </Suspense>
       },
       {
         path:'restrunts/:ResId',

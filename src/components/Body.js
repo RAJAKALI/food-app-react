@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import RestruntCard from "./RestruntsCard";
 import { useEffect, useState } from "react";
+import useOnline from "../utils/Online";
+import Shimmer from "./Shimmer";
 const Body = () => {
   const [searchValue, setSearchValue] = useState("");
   const [restruntsList, setRestruntsList] = useState([]);
@@ -14,8 +16,10 @@ const Body = () => {
     const json=await data.json();
     setRestruntsList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setFilteredData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-  }
-  return (
+  };
+  const onlinestatus=useOnline();
+  if(onlinestatus===false)return <h1 style={{marginTop:'60px'}}>Offline please check your internet connection once...!</h1>;
+  return restruntsList.length===0?<Shimmer/>:(
     <>
       {/* search */}
       <div className="Search-filter">

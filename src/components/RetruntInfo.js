@@ -1,20 +1,10 @@
-import { useEffect, useState } from "react";
-import { RES_INFO_API } from "../utils/constants";
-import { json, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import useRestruntInfo from "../utils/ResFetchApi";
+
 const ResturntInfo=()=>{
     const {ResId}=useParams();
     console.log(ResId);
-    const [resInfo,setResInfo]=useState(null);
-    useEffect(()=>{
-        fetchResAPi();
-    },[])
-    
-    const fetchResAPi=async()=>{
-          const data=await fetch(RES_INFO_API+ResId);
-          const json=await data.json();
-          console.log(json.data);
-          setResInfo(json.data);
-    }
+    const resInfo=useRestruntInfo(ResId);
     if(resInfo===null){ return <h1>Loading...</h1>}
     const {name,city,cuisines,sla}=resInfo?.cards[2]?.card?.card?.info;
     return(
