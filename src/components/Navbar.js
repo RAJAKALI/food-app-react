@@ -5,24 +5,23 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [loginToggle, setLoginToggle] = useState("Login");
   return (
-    <div className="nav-main">
-      <div className="navbar">
-        <img className="nav-header" src={LOGO} />
-        <div className="right-nav">
-          <ul>
-            <li>
+      <div className="fixed w-full top-0  bg-slate-50 flex justify-between p-2 border border-b-gray-300 shadow-md z-50">
+        <Link to="/"><img className=" w-12 ml-2" src={LOGO} /></Link>
+        <div className="mr-2">
+          <ul className="flex pt-2">
+            <li className=" mx-3 hover:text-violet-600">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className=" mx-3  hover:text-violet-600">
               <Link to="/about">About</Link>
             </li>
-            <li>
+            <li className=" mx-3  hover:text-violet-600">
               <Link to="/contacts">Contacts</Link>
             </li>
-            <li>
+            <li className=" mx-3  hover:text-violet-600">
               <Link to="#">Cart</Link>
             </li>
-            <li>
+            <li className=" mx-3  hover:text-violet-600">
               <Link href="#">
                 <button
                   onClick={() => {
@@ -37,7 +36,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </div>
   );
 };
 
