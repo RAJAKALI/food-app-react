@@ -1,21 +1,34 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState, } from "react";
 import ReactDOM from "react-dom/client";
 import "../index.css";
 import Navbar from "./components/Navbar";
 import Body from "./components/Body";
 import About from "./components/About";
-// import Contacts from "./components/Contacts";
 import Error from "./components/Error";
 import { Outlet } from "react-router-dom";
 import { createBrowserRouter,Outlet,RouterProvider } from "react-router-dom";
 import ResturntInfo from "./components/RetruntInfo";
+import UserContext from "./utils/UserContext";
+
 const Contacts = lazy(() => import('./components/Contacts'));
-const AppLayout = () => (
+
+const AppLayout = () => {
+  const [userName,setUserName]=useState();
+  useEffect(()=>{
+    const data={
+      name:"kali",
+    };
+    setUserName(data.name)
+  },[]);
+  return(
+  <UserContext.Provider value={{LogedInUser:userName}}>
   <>
     <Navbar />
     <Outlet/>
   </>
-);
+  </UserContext.Provider>
+  );
+};
 
 const routerroot=createBrowserRouter([
   {

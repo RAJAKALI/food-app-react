@@ -2,15 +2,18 @@ import { Link } from "react-router-dom";
 import RestruntCard, { withPromotedRestrunt } from "./RestruntsCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import useOnline from "../utils/Online";
 const Body = () => {
   const [searchValue, setSearchValue] = useState("");
   const [restruntsList, setRestruntsList] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const UpdatedRestrunCard = withPromotedRestrunt(RestruntCard);
+  const isOnline=useOnline();
+  const [showCross,setShowcross]=useState(true);
   useEffect(() => {
     fetchdata();
   }, []);
-
+  
   const fetchdata = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8167303&lng=77.6974369&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
@@ -23,7 +26,7 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-  return restruntsList.length === 0 ? (
+  return isOnline===false?showCross&&<div  className=" bg-black text-white mt-72 mx-5 flex justify-between items-center"><h1 className="text-center  p-2">Offline</h1><span className="mr-3"><button onClick={()=>{setShowcross(false)}} className=" font-bold">&#10005;</button></span></div>: restruntsList.length === 0 ? (
     <Shimmer />
   ) : (
     <>
