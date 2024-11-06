@@ -9,6 +9,9 @@ import { Outlet } from "react-router-dom";
 import { createBrowserRouter,Outlet,RouterProvider } from "react-router-dom";
 import ResturntInfo from "./components/RetruntInfo";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 const Contacts = lazy(() => import('./components/Contacts'));
 
@@ -21,12 +24,14 @@ const AppLayout = () => {
     setUserName(data.name)
   },[]);
   return(
+  <Provider store={appStore}>
   <UserContext.Provider value={{LogedInUser:userName}}>
   <>
     <Navbar />
     <Outlet/>
   </>
   </UserContext.Provider>
+  </Provider>
   );
 };
 
@@ -52,6 +57,10 @@ const routerroot=createBrowserRouter([
       {
         path:'restrunts/:ResId',
         element:<ResturntInfo/>
+      },
+      {
+        path:'/cart',
+        element:<Cart/>
       }
     ],
     errorElement:<Error/>,

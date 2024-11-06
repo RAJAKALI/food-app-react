@@ -11,7 +11,6 @@ const ResturntInfo=()=>{
     if(resInfo===null){ return <h1>Loading...</h1>}
     const {name,city,cuisines,sla}=resInfo?.cards[2]?.card?.card?.info;
     const CardItems=resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-    console.log(CardItems);
     return(
         <>
        <div className="mt-20 text-center">

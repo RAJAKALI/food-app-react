@@ -20,7 +20,7 @@ setShowListItems();
         {showListItems&&<div>
             {
                 itemCards.map(item=>
-                    <ListItemCards key={item?.card?.info?.id}{...item?.card?.info}/>
+                    <ListItemCards key={item?.card?.info?.id}{...item?.card?.info} cart={false}/>
                 )
             }
         </div>
