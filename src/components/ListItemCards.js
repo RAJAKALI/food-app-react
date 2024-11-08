@@ -10,7 +10,7 @@ const ListItemCards = ({ name, description, imageId, defaultPrice, price,id,cart
   const dispatch=useDispatch();
   return (
     <div className=" border-gray-300 border-b-[1px] flex justify-between p-3">
-      <div className="w-9/12">
+      <div data-testid="fooditems" className="w-9/12">
         <h4 className=" font-semibold">
           {name} - ₹{price ? price / 100 : defaultPrice / 100}
         </h4>

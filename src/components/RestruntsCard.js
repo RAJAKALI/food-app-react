@@ -1,3 +1,4 @@
+import React from "react";
 import { IMG_CDN_URL } from "../utils/constants";
 const RestruntCard = ({
     name,
@@ -7,7 +8,7 @@ const RestruntCard = ({
     showLabel
 }) => {
   return (
-    <div className=" relative overflow-hidden h-auto border border-gray-300 shadow-md rounded-md transition-transform duration-300 hover:scale-95">
+    <div data-testid="resturntcard" className=" relative overflow-hidden h-auto border border-gray-300 shadow-md rounded-md transition-transform duration-300 hover:scale-95">
     {showLabel && (
         <label className="absolute top-1 left-0 bg-black text-white p-2 z-10 rounded-tr-md rounded-br-md">Veg</label>
       )}

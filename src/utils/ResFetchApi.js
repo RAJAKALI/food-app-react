@@ -10,7 +10,6 @@ const useRestruntInfo=(ResId)=>{
     const fetchResAPi=async()=>{
           const data=await fetch(RES_INFO_API+ResId);
           const json=await data.json();
-          console.log(json.data);
           setResInfo(json.data);
     }
 

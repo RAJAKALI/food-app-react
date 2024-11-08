@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import RestruntCard, { withPromotedRestrunt } from "./RestruntsCard";
-import { useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import useOnline from "../utils/Online";
 const Body = () => {
@@ -35,6 +35,7 @@ const Body = () => {
         <div className="ml-1">
           <input
             type="text"
+            data-testid="searchInput"
             value={searchValue}
             onChange={(e) => {
               setSearchValue(e.target.value);
@@ -70,6 +71,7 @@ const Body = () => {
 
         <div className="">
           <button
+            data-testid="toprated"
             onClick={() => {
               const filterdinfo = restruntsList.filter(
                 (restfill) => restfill.info.avgRatingString > 4

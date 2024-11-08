@@ -8,7 +8,6 @@ import Error from "./components/Error";
 import { Outlet } from "react-router-dom";
 import { createBrowserRouter,Outlet,RouterProvider } from "react-router-dom";
 import ResturntInfo from "./components/RetruntInfo";
-import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
@@ -16,21 +15,12 @@ import Cart from "./components/Cart";
 const Contacts = lazy(() => import('./components/Contacts'));
 
 const AppLayout = () => {
-  const [userName,setUserName]=useState();
-  useEffect(()=>{
-    const data={
-      name:"kali",
-    };
-    setUserName(data.name)
-  },[]);
   return(
   <Provider store={appStore}>
-  <UserContext.Provider value={{LogedInUser:userName}}>
   <>
     <Navbar />
     <Outlet/>
   </>
-  </UserContext.Provider>
   </Provider>
   );
 };
