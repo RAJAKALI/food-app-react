@@ -6,10 +6,5 @@
       "@parcel/transformer-react-refresh-wrap"
     ],
     "*.css": ["@parcel/transformer-postcss"]
-  },
-  "targets": {
-    "node": {
-      "engines": ["node>=14"]
-    }
   }
 }
