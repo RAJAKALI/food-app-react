@@ -16,7 +16,7 @@ const Body = () => {
   
   const fetchdata = async () => {
     const data = await fetch(
-      "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8167303&lng=77.6974369&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://cors.bridged.cc/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8167303&lng=77.6974369&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
     setRestruntsList(
