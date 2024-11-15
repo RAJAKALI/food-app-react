@@ -1,20 +1,62 @@
-<h1>Food Ordering App</h1>
-<hr><p>This an Swiggy Clone App</p><h2>Technologies Used</h2>
-<hr><ul>
-<li>HTML</li>
-</ul><ul>
-<li>CSS</li>
-</ul><ul>
-<li>JavaScript</li>
-</ul><ul>
-<li>React</li>
-</ul><ul>
-<li>Redix</li>
-</ul><h2>Features</h2>
-<hr><ul>
-<li>Add orders to Cart - Done</li>
-</ul><ul>
-<li>Add User Login - WIP</li>
-</ul><ul>
-<li>User Panels - WIP</li>
-</ul>
+# 🍔 Food Ordering App  
+_A Swiggy Clone App_
+
+---
+
+## 🚀 Introduction  
+This project is a **Swiggy Clone App** built to replicate the core functionalities of a food ordering platform.
+
+---
+
+## 🛠️ Technologies Used  
+We leverage the following tools and technologies to build this app:  
+
+- **HTML**  
+- **CSS**  
+- **JavaScript**  
+- **React**  
+- **Redux**  
+
+---
+
+## 🌟 Features  
+
+### ✅ Completed  
+- 🛒 **Add Orders to Cart**: Smoothly add food items to your cart for checkout.  
+
+### 🚧 Work In Progress (WIP)  
+- 🔒 **User Login**: Secure login system for users.  
+- 🖥️ **User Panels**: Dedicated panels for personalized user interactions.  
+
+---
+
+## 📝 Change Log  
+Here’s what we’ve been working on recently:  
+
+### **v1.0** (Initial Release)  
+- 🎉 Basic structure and cart functionality implemented.  
+
+### **v1.1**  
+- 🚀 Work started on **User Login** and **User Panels**.  
+
+---
+
+## 📷 Preview  
+> _Include a screenshot or GIF of your app here to showcase its UI and functionality._  
+
+---
+
+## 👨‍💻 Contributors  
+A huge shoutout to all the amazing developers contributing to this project!  
+
+---
+
+### 🎯 Future Plans  
+- Add more payment options.  
+- Enhance the UI for better user experience.  
+- Introduce a restaurant management panel.  
+
+---
+
+## 📝 License  
+This project is
